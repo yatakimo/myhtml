@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <title>Page Tutorial</title>
+  <style>
+        * {box-sizing:border-box}
+
+        .walk {
+  width: 100px; /*寬度*/
+  height: 100px; /*高度*/
+  background-color: transparent;
+  position: relative;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+/*動畫的定義 / 關鍵影格 / 8/25% = 2s / 導師版本2 */
+@keyframes example { 
+  0%   {background-color:transparent; left:0px; top:0px;transform:rotateY(0deg);}
+  12.5%  {background-color:transparent; left:250px; top:0px;transform:rotateY(0deg);}
+  25%  {background-color:transparent; left:500px; top:0px;transform:rotateY(0deg);}/*transform rotateY 旋轉角度.0deg*/
+  37.5%  {background-color:transparent; left:750px; top:0px;transform:rotateY(0deg);}
+  49% {background-color:transparent; left:900px; top:0px;transform:rotateY(0deg);}
+  51% {background-color:transparent; left:900px; top:0px;transform:rotateY(180deg);}
+  62.5%   {background-color:transparent; left:750px; top:0px;transform:rotateY(180deg);}
+  75%  {background-color:transparent; left:500px; top:0px;transform:rotateY(180deg);}
+  87.5%  {background-color:transparent; left:250px; top:0px;transform:rotateY(180deg);}
+  100%  {background-color:transparent; left:0px; top:0px;transform:rotateY(180deg);}
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none; /*<===不顯示*/
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer; /*滑鼠指標樣式*/
+  position: absolute;
+  top: 50%; 
+  width: auto; /*寬度*/
+  margin-top: -22px; /*符號大小*/
+  padding: 16px; /*位置*/
+  color: white; /*顏色*/
+  font-weight: bold; /*粗體*/
+  font-size: 18px; /*字型的大小*/
+  transition: 0.6s ease; /*移動的動畫(數度)*/
+  border-radius: 0 3px 3px 0; /*外寬大小 兩個3px 造成半圓弧 */
+  user-select: none; 
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0; /*靠右邊*/
+  border-radius: 3px 0 0 3px; /*套用時會被蓋掉*/
+}
+
+/* On hover, add a black background color with a little bit see-through */ 
+.prev:hover, .next:hover {    /*滑鼠移到他身上後變換顏色 / 左箭頭跟右箭頭*/
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px; /*文字的上元跟邊線的下緣*/
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0; /*容器上方*/
+}
+
+/* The dots/bullets/indicators */
+/*今天我們指標移到上面變透明*/ /* CSS定義滑鼠顏色*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb; /*背景顏色*/  
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover /*滑鼠移上去會變*//*背景顏色*/ {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+  </style>
+
+  <script>
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// 目前要跳到第幾張
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+/*顯示第N張影像*/
+function showSlides(n) {
+  var i; /*變數定義*/      /*收放的概念*/
+  var slides = document.getElementsByClassName("mySlides");/* 透過get抓取元素 */
+        /*由標籤中套用class為"myslides"的標籤 " 的標籤內容*/
+        /*在本網頁中使用 mySlides 類別共有 5 個 <div>*/ 
+        /*因此slides會以陣列(Array) 形式存放，陣列索引值0-4。*/
+        
+  var dots = document.getElementsByClassName("dot"); 
+        /*由標籤中套用class為"dot"的標籤 " 的標籤內容*/
+        /*在本網頁中使用 dots 類別共有 5 個 <div> */
+        /*因此dots會以陣列(Array) 形式存放，陣列索引值0-4。*/
+        /*Slides[0],slides[1],slides[2],slides[3],slides[4]*/
+        /*div有個屬性是樣式*/
+
+        /*讓影像循環顯示*/
+  if (n > slides.length) {slideIndex = 1}/*超過最後一張編號跳回第一張 */ /*slideindex 多出時跳回第一章*/
+  /*判斷n有沒有超過放為 超過回第一張*/
+  if (n < 1) {slideIndex = slides.length} /* 低於第一章的編號就跳至最後一張 */
+  /*如果n小於1 抱歉沒有更小張所以跳回地5張*/
+  /*利用迴圈(for)將slides陣列裡每一個div的display樣式設定為"none"。*/
+  /*經常使用的稱為迴圈 樣式中設為none代表不要顯示 一律改為none不讓它顯示在讓想要顯示得之後讚讓她顯示*/
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  /*i++是每做一次就加一 i=從陣列裡抓出來 只要每跑一輪 slides[i].style.的display都設none*/
+  /*將每一個套用 dot 類別的span標籤中和如果有另外套用 active 類別，將active取消套用*/
+  /*也就是將套用class的名稱為"dot active" 取代成"dot"*/
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  /*他把所有的dots[i].className.給replace 設為沒有跟active*/
+
+  /*將目前要顯示的影像設定為顯示*/
+  slides[slideIndex-1].style.display = "block";
+
+  /*將目前顯示影像對應的原點設定套用 active 類別*/
+  dots[slideIndex-1].className += " active";
+  
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlidesAuto() {
+  slideIndex++;
+  currentSlide(slideIndex);
+}
+
+  </script>
+
+</head>
+<body>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="../images/mobileadv_322_7020416_61657.png" style="width:100%">
+      <div class="text">第一章圖標題文字</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="../images/mobileadv_324_3425310_22842.png" style="width:100%">
+      <div class="text">第二章圖標題文字</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="../images/mobileadv_330_1586163_16271.png" style="width:100%">
+      <div class="text">第三章圖標題文字</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="../images/mobileadv_345_9814586_36437.png" style="width:100%">
+        <div class="text">第四章圖標題文字</div>
+      </div>
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="../images/mobileadv_370_6582789_42132.png" style="width:100%">
+        <div class="text">第五章圖標題文字</div>
+      </div>
+      <div>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div>
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div> <!-- 各代表一個圈圈 -->
+  <div class="walk">
+    <img src="../images/行走人物動畫.gif" style="width: 100%;">
+  </div>
+</body>
+<script>
+  currentSlide(1);/*顯示第一張影像，必須在</body>後執行*/
+  window.setInterval(showSlidesAuto,5000);
+  /*間隔 5 秒執行一次*/
+</script>
+</html>

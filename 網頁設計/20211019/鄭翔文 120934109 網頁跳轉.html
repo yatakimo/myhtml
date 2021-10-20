@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta http-equiv="Content-Language" content="zh-TW">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="鄭翔文/120934109">
+    <meta name="copyright" content=""><!--設置版權(內容)-->
+    <meta name="distribution" content="Taiwan">
+    <title>120934109 鄭翔文 網頁跳轉</title>
+</head>
+<style>
+body{
+    margin: 0px auto;
+    background: url() no-repeat ;
+    position:sticky;
+    top: 200px;
+}
+h1{
+    text-decoration: underline;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 25px;
+    font-weight: bold;
+    text-align:justify;
+    line-height: 250%;
+ }
+.Menu{
+    background-color: #41b2d4;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+.Menudown{
+    position: fixed;
+    display: inline-block;
+    float: none;
+    right: 8px;
+    top: 350px;
+    z-index: 3;
+}
+.docontent{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 65px;
+    top:5px;
+}
+.docontent A {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.docontent A:hover {
+    background-color: #f1f1f1
+}
+.Menudown:hover .docontent {
+    display: block;
+}
+
+.Menudown:hover .Menu {
+    background-color: #113086;
+}
+.Top{
+    background-color: #41b2d4;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+.TopA{
+    position: fixed;
+    float: none;
+    right: 10px;
+    top: 420px;
+    z-index: 3;
+}
+.hotdog{
+    width: 75px;
+    height: 100px;
+    float: none; 
+    right: 0px;
+    top: 25%;
+    position: fixed;
+}
+.cat{
+    position: absolute;
+    right: 30px;
+    top: 220px;
+    z-index: 2;
+}
+.table{
+    position: absolute;
+    right: 30px;
+    top: 380px;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+}
+.New1{
+    margin: 0 auto;
+    text-align: center;
+    word-wrap: break-word;
+}
+.text{
+    width: 900px;
+    margin: 0 auto;
+}
+.Top:hover{opacity: 1;}
+</style>
+
+<script>
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0; 
+    }
+</script>
+
+<body>
+<div class="Menudown">
+    <button class="Menu">目錄</button>
+        <div class="docontent">
+            <a href="#Nw1">第一章</a>
+            <a href="#Nw2">第二章</a>
+            <a href="#Nw3">第三章</a>
+        </div>
+</div>
+
+<div class="TopA">
+    <button class="Top" onclick="topFunction()">回頁首</button>
+</div>
+<div id="Pu">
+</div>
+<div>
+    <p style="text-align: center; margin-right: auto;margin-top: 0px;">導航列預留位置</p>
+</div>
+<div class="cat" id="Acat">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"width="300px" height="300px" 
+    viewBox="0 0 673.000000 1280.000000"preserveAspectRatio="xMidYMid meet" id="Bcat">
+        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+            fill="#000000" stroke="none">
+            <path d="M225 12780 c-58 -64 17 -287 203 -609 40 -68 72 -126 72 -130 0 -3
+            -27 -37 -61 -76 -91 -105 -183 -230 -215 -292 l-28 -55 17 -62 c23 -88 40
+            -314 32 -431 -10 -148 -21 -189 -62 -233 -51 -54 -88 -110 -133 -203 -53 -110
+            -58 -138 -30 -191 40 -76 134 -192 260 -319 144 -146 224 -204 280 -204 l38 0
+            -21 -50 c-110 -270 -157 -530 -157 -870 0 -612 188 -1300 565 -2064 l92 -187
+            5 -144 c3 -80 2 -283 -3 -452 -13 -459 -45 -726 -102 -851 -23 -51 -29 -57
+            -123 -107 -272 -146 -373 -247 -374 -373 0 -57 34 -135 64 -147 80 -30 664
+            -61 770 -41 101 19 114 48 76 171 -56 184 15 307 248 425 39 20 72 41 72 47 0
+            11 276 923 287 951 5 9 9 -54 9 -140 4 -444 113 -747 306 -846 l53 -28 -55 6
+            c-211 21 -468 14 -600 -16 -238 -56 -340 -176 -295 -351 17 -67 78 -200 100
+            -218 8 -7 145 -14 382 -20 202 -5 456 -12 563 -15 285 -9 1310 -34 1635 -40
+            154 -3 304 -8 332 -11 l53 -5 98 -137 c233 -322 421 -606 605 -914 433 -722
+            689 -1325 762 -1793 24 -155 17 -410 -15 -510 -60 -191 -179 -332 -350 -418
+            -257 -129 -668 -154 -946 -58 -257 88 -459 289 -609 604 -49 104 -148 384
+            -190 540 -32 117 -119 166 -211 119 -106 -54 -138 -158 -115 -367 26 -229 92
+            -451 201 -673 292 -597 633 -871 1210 -973 125 -23 431 -17 572 9 340 64 634
+            216 848 438 371 385 479 940 314 1599 -38 154 -111 365 -227 655 -185 465
+            -301 711 -451 953 -47 75 -97 159 -110 185 -59 119 -135 335 -231 662 -57 196
+            -63 226 -69 340 -26 488 -140 1166 -286 1699 -239 871 -578 1567 -1036 2129
+            -106 130 -386 410 -504 503 -304 241 -633 425 -973 542 -16 6 -17 20 -11 184
+            17 473 -76 963 -260 1372 -230 508 -622 915 -1129 1170 -316 159 -377 176
+            -420 120 -25 -35 -25 -153 2 -264 10 -44 15 -73 10 -65 -5 8 -26 43 -47 77
+            -112 187 -311 351 -525 434 -113 43 -138 46 -162 19z"/>
+        </g>
+    </svg>    
+</div>
+<div class="table" id="table">
+    <?xml version="1.0" encoding="iso-8859-1"?>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" class="Btable">
+        <g>
+            <path d="M510,56.25H0v45h45v22.5h15v7.5h15v-7.5h15v19.905l22.5,9.844v0.251h0.574l53.322,23.328   
+            C192.884,188.667,210,214.837,210,243.75v7.5h90v-7.5c0-28.913,17.116-55.083,43.604-66.672L420,143.655V123.75h15v7.5h15v-7.5h15  
+            v-22.5h45V56.25z M405,133.845l-11.212,4.905H300v15h59.503l-21.91,9.586c-29.641,12.967-49.551,41.075-52.273,72.914H262.5v-37.5   
+            h-15v37.5h-22.819c-2.723-31.839-22.633-59.947-52.273-72.914l-21.91-9.586H255v-15H116.212L105,133.845V123.75h300V133.845z 
+            M450,108.75H60v-7.5h390V108.75z M495,86.25H15v-15h480V86.25z"/>
+            <path d="M360,386.25c0-24.813-20.187-45-45-45h-15.637c-2.264-13.43-10.493-24.852-21.863-31.446V281.25h7.5v-15h-60v15h7.5v28.554
+            c-11.37,6.595-19.599,18.017-21.863,31.446H195c-24.813,0-45,20.187-45,45c0,16.542-13.458,30-30,30h-7.5v37.5h16.325   
+            c36.489,0,66.175-29.686,66.175-66.175c0-0.731,0.595-1.325,1.325-1.325h33.812c0.771,0.514,1.557,1.008,2.363,1.476v43.524   c0,12.407,10.094,22.5,22.5,22.5s22.5-10.093,22.5-22.5v-43.524c0.806-0.467,1.592-0.962,2.363-1.476h33.812  
+            c0.73,0,1.325,0.594,1.325,1.325c0,36.489,29.686,66.175,66.175,66.175H397.5v-37.5H390C373.458,416.25,360,402.792,360,386.25z    
+            M247.5,281.25h15v23.137c-2.441-0.411-4.944-0.637-7.5-0.637s-5.059,0.226-7.5,0.637V281.25z M255,318.75   
+            c16.542,0,30,13.458,30,30c0,7.516-2.739,14.499-7.5,19.869v-4.869c0-12.407-10.094-22.5-22.5-22.5s-22.5,10.093-22.5,22.5v4.869   
+            c-4.761-5.37-7.5-12.353-7.5-19.869C225,332.208,238.458,318.75,255,318.75z M180,387.575c0,28.218-22.957,51.175-51.175,51.175   
+            H127.5v-8.125c21.256-3.581,37.5-22.117,37.5-44.375c0-16.542,13.458-30,30-30h15.646c0.912,5.313,2.771,10.392,5.438,15h-19.758   
+            C187.323,371.25,180,378.573,180,387.575z M262.5,431.25c0,4.136-3.364,7.5-7.5,7.5s-7.5-3.364-7.5-7.5v-67.5   
+            c0-4.136,3.364-7.5,7.5-7.5s7.5,3.364,7.5,7.5V431.25z M382.5,438.75h-1.325c-28.218,0-51.175-22.957-51.175-51.175   
+            c0-9.002-7.323-16.325-16.325-16.325h-19.758c2.667-4.608,4.526-9.688,5.438-15H315c16.542,0,30,13.458,30,30   
+            c0,22.258,16.244,40.794,37.5,44.375V438.75z"/>
+            
+            <rect x="270" y="138.75" width="15" height="15"/>
+        </g>
+    </svg>
+</div>
+<div>
+    <h1 style="position: absolute; top: 340px;right: 250px;">120934109 鄭翔文 作業/跳轉</h1>
+</div>
+<div>
+    <img src="350.jpg"  width="99%" height="604px"style="margin-top: 0;margin-left: 0.5%" alt="幻燈片預留區塊">
+</div>
+<div class="New1" id="Nw1">
+    <h1>資安風險對公司財業務影響 金管會擬修法揭露</h1>
+    <p style="font-size: small;">2021-10-19 22:46 中央社 / 台北19日電</p>
+    <figure>
+    <a href="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/10/14/realtime/14300395.jpg&s=Y&x=0&y=38&sw=1280&sh=720&sl=W&fw=800&exp=3600&w=930&nt=1"><img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/10/14/realtime/14300395.jpg&s=Y&x=0&y=38&sw=1280&sh=720&sl=W&fw=800&exp=3600&w=930&nt=1" width="798" height="448"></a>
+    <figcaption>金管會。聯合報系資料照片／記者戴瑞瑤攝影</figcaption>
+    </figure>
+    <div class="text">
+        <ul>
+            <li>為強化企業對資通安全風險的相關揭露，金管會擬修法明定公司應揭露資安風險對財業
+           務影響及因應措施，以及若發生重大資通安全事件，應揭露所遭受的損失、可能影響
+            等。</li>
+            <li>為接軌國際規範，提升公司推動永續發展資訊揭露品質，並強化資通安全風險管理的資訊揭露
+                ，金管會證期局副局長蔡麗玲今天公布「公司募集發行有價證券公開說明書應行記載事項準則」
+                部分條文修正草案，預告期定為60日。
+            </li>
+            <li>在提升公司推動永續發展資訊揭露品質方面，金管會將強化企業在「環境」及「社會」層面的資訊揭露，
+                包含引導公司提升資訊揭露品質及提供更具可比較性資訊，
+                金管會增訂相關揭露指引，以利公司揭露更具體明確及量化的內容。</li>
+            <li>此外，在強化「公司治理」資訊揭露方面，
+                金管會要求公司應敘明董事會獨立董事比重及附理由說明董事會是否具獨立性；
+                並明定公司應敘明薪資報酬委員會成員專業資格及符合獨立性情形
+                ，公司若有設置提名委員會，也應揭露組成及運作情形。</li>
+            <li>在強化資通安全管理資訊揭露方面，金管會認為，目前公司雖可自行辨認及揭露資通安全風險暴露情形，
+                但為落實公司對資通安全的風險揭露，明定公司應揭露資通安全風險對公司財務業務影響及因應措施，
+                以及因重大資通安全事件所遭受的損失、可能影響及因應措施等。</li>
+            <li>金管會今天宣布修法放寬市值達新台幣20億元以上且法遵情形良好的上市櫃公司辦理現金增資可採「總括申報」
+                ，預計最晚明年第1季正式上路；配合此新制，金管會在「公司募集發行有價證券公開說明書應行記載事項準則」修正草案明定，採總括申報發行新股應在公開說明書封面以顯著字體註明
+                ，並揭露預定發行總額、已發行總額與總括申報餘額等相關資訊。</li>
+            <li><a href="https://udn.com/news/story/7239/5828889?from=udn-ch1_breaknews-1-0-news"><b>原文</b></a></li>
+        </ul>
+    </div>
+</div>
+<div class="New1" id="Nw2" style="margin-top: 200px;">
+    <h1>疑似中國相關駭客組織入侵世界各地電信商　竊取通聯紀錄</h1>
+    <figure>
+        <a href="https://tw.appledaily.com/resizer/lciJXAlq0mwB2cYnO8tOlU5nOec=/760x427/filters:quality(100)/cloudfront-ap-northeast-1.images.arcpublishing.com/appledaily/6WWWBDMJQJGFRBTZP3X3WZ3S3E.jpg"><img src="https://tw.appledaily.com/resizer/lciJXAlq0mwB2cYnO8tOlU5nOec=/760x427/filters:quality(100)/cloudfront-ap-northeast-1.images.arcpublishing.com/appledaily/6WWWBDMJQJGFRBTZP3X3WZ3S3E.jpg"></a>
+        <figcaption>一個疑似與中國有關聯的駭客組織，入侵世界各地行動電話網路。法新社</figcaption>
+    </figure>
+<div class="text">
+    <ul>
+        <li>美國資安公司CrowdStrike19日表示，一個疑似與中國有關聯的駭客組織入侵世界各地行動電話網路，
+            利用專門工具，自電信營運商處竊取通聯紀錄和簡訊內容。</li>
+            <li>CrowdStrike公司表示，這個被稱為LightBasin的駭客組織至少從2016年就開始行動，
+                該組織近日被發現使用迄今為止最複雜工具之一。</li>
+                <li>長期以來，電信公司一直是各國攻擊的首要目標，中國、俄羅斯、伊朗等國都曾發動或企圖發動攻擊。
+                    美國也試圖取得通聯紀錄，這些紀錄可顯示哪些號碼曾經相互通話、通話頻率和通話時間。</li>
+                    <li>CrowdStrike情報部副總裁麥爾斯（Adam Meyers）指出，該公司負責因應多個國家或地區發生的事件，因此收集到上述資訊，
+                        但他拒絕透露是哪些哪些國家或地區。該公司19日也公布技術細節，以利其他公司檢查是否發生類似攻擊。</li>
+                        <li>麥爾斯說，那個駭客組織使用的程式可以在不引人注意的狀況下取得特定資料，
+                            「我從未見過專業程度這麼高的工具」。</li>
+                            <li>麥爾斯說，他的團隊並未指控中國政府指示駭客組織發動攻擊，但這些攻擊確實與中國有關，
+                                包括以漢語拼音為基礎的編碼技術，以及類似北京過往攻擊所使用的技術。</li>
+                                <li>中國駐美國大使館並未回應路透的相關詢問。</li>
+                                <li>美國國土安全部網路安全和基礎設施安全局（U.S. Cybersecurity and Infrastructure Security Agency）則回應稱
+                                    ，他們已知悉CrowdStrike的報告內容，並將繼續與美國電信公司密切合作。（中央社）</li>
+                                    <li><a href="https://tw.appledaily.com/international/20211019/N4BBI3GR7NET3E7EWR62LHIBCA/"><b>原文</b></a></li>
+    </ul>
+</div>
+</div>
+<div class="New1" id="Nw3" style="margin-top: 200px;">
+    <h1>城中城「防火門早被拆」　專家：防火區劃遭破壞是死傷慘重元凶</h1>
+    <figure>
+        <a href="https://tw.appledaily.com/resizer/-gztAR86VYR8U4nbcp2diiWoi8I=/760x570/filters:quality(100)/cloudfront-ap-northeast-1.images.arcpublishing.com/appledaily/5K2H4JBZPVHUHIOALO4NAVZUDI.jpg"><img src="https://tw.appledaily.com/resizer/-gztAR86VYR8U4nbcp2diiWoi8I=/760x570/filters:quality(100)/cloudfront-ap-northeast-1.images.arcpublishing.com/appledaily/5K2H4JBZPVHUHIOALO4NAVZUDI.jpg"></a>
+        <figcaption>論者說明防火門的重要性，是防火區劃的將災害限制在一定空間不使之擴散的概念。圖為被燒得一片漆黑的城中城大樓內部。<br>民眾提供資料照片
+            圖片來源 : 蘋果新聞網</figcaption>
+    </figure>
+    <div class="text">
+        <ul>
+            <li>林建昌／中華民國防火門商業同業公會秘書長</li>
+            <li>消防單位重返高雄城中城火場勘查，發現<a href="https://tw.appledaily.com/local/20211015/W7QPXSMACRGEJHBNP4DC7MDOZA/">各樓層的防火安全門及廢棄電梯門「早都被拆去賣掉了」</a>，以致各樓層完全無防火隔煙功能，「防火區劃」遭破壞是造成住戶慘重死傷的元凶。
+                為了不使火場濃煙、火焰以及溫度到處流竄，國內《建築技術規則》早有「防火區劃」的規定，目的就是透過防火門防火牆等建材，將災害限制在一定空間不使之擴散，而當兩樓層之間或安全梯的防火門被打開，
+                甚至是「早都被拆去賣掉了」，就表示垂直防火區劃已經失效，說白了，整棟建物就是不安全的。</li>
+                <li>為了不使火場濃煙、火焰以及溫度到處流竄，國內《建築技術規則》早有「防火區劃」的規定，目的就是透過防火門防火牆等建材，將災害限制在一定空間不使之擴散，而當兩樓層之間或安全梯的防火門被打開，甚至是「早都被拆去賣掉了」
+                    ，就表示垂直防火區劃已經失效，說白了，整棟建物就是不安全的。</li>
+                    <li>社區大樓管委會平時就應當對建物的防火區劃多一分了解，民眾平時也該針對住家環境各樓層的安全梯、通道間以及活動場所出入口的防火門做兩個簡單測試：一是免用鑰匙即能打開防火門，二是將門打開放手之後門扇能自動關閉。
+                        免用鑰匙是為防止災害發生時無法脫逃，而門扇自動關閉是為了恢復防火區劃的功能。</li>
+        </ul>
+        <figure>
+       <a href="https://tw.appledaily.com/resizer/Y9bMyuIsQMgsuS0Kzt4Gehtl-wk=/760x760/filters:quality(100)/cloudfront-ap-northeast-1.images.arcpublishing.com/appledaily/TIHHSQPFXVELTAJDTJ73UP6GRA.jpeg"><img src="https://tw.appledaily.com/resizer/Y9bMyuIsQMgsuS0Kzt4Gehtl-wk=/760x760/filters:quality(100)/cloudfront-ap-northeast-1.images.arcpublishing.com/appledaily/TIHHSQPFXVELTAJDTJ73UP6GRA.jpeg"></a>
+        <figcaption>防火門識別標識舊版（上）與新版（下），新版增加了QRcode可供查詢生產履歷。<br>林建昌提供翻攝畫面</figcaption>
+    </figure>
+    <ul>
+        <li>合法的防火門上面都有識別標章，新版的識別標章上面還增加了QRcode，掃描之後就可以掌握到防火門的生產履歷，如果防火門無法自動關閉或無法完全關閉，即可以依照生產履歷上的資料請相關業者進行維修。</li>
+        <li>老舊社區及大樓也一定有裝設防火門，但如果門扇年久失修無法正常開關，加上民眾公共安全意識薄弱，把公共空間的門都拆了賣錢，遇上火災時要阻絕災害蔓延才發現連門都沒有，結果不僅是悲慘也是諷刺，公共安全的觀念在平時就該一再宣導，全世界最先進的防火避難設計，
+            就是「落實」兩字，「落實防火區劃完整性、落實防火設備檢修、落實防火訓練與宣導」。</li>
+            <li>有落實，至少不用等到出了人命再來檢討。</li>
+            <li><a href="https://tw.appledaily.com/forum/20211019/ZPKZY2E4PBF6ZMLONUKRXS2ZVI/">原文</a></li>
+    </ul>
+    </div>
+</div>
+<script>
+function showdogAuto(){
+    var div = document.getElementById("Pu");
+    var x = div.getBoundingClientRect();
+    y = x.top
+    if (y <= -300){
+    var K = true
+   }
+   else{
+       var K = false
+   }
+   if(K == true){
+       document.getElementById("Acat").style.position = "fixed";
+       document.getElementById("Acat").style.right = "0px";
+       document.getElementById("Acat").style.top = "250px";
+       document.getElementById("Bcat").style.width = "75px";
+       document.getElementById("Bcat").style.height = "100px";
+       document.getElementById("table").style.position = "fixed";
+       document.getElementById("table").style.right = "20px";
+       document.getElementById("table").style.top = "310px";
+       document.getElementById("table").style.width = "50px";
+       document.getElementById("table").style.height = "50px";
+   }
+   else if(K == false){
+       document.getElementById("Acat").style.position = "absolute";
+       document.getElementById("Acat").style.right = "30px";
+       document.getElementById("Acat").style.top = "220px";
+       document.getElementById("Bcat").style.width = "300px";
+       document.getElementById("Bcat").style.height = "300px";
+       document.getElementById("table").style.position = "absolute";
+       document.getElementById("table").style.right = "30px";
+       document.getElementById("table").style.top = "380px";
+       document.getElementById("table").style.width = "300px";
+       document.getElementById("table").style.height = "300px";
+   }
+}
+</script>
+</body>
+<script>
+    window.setInterval(showdogAuto,500);
+</script>
+</html>

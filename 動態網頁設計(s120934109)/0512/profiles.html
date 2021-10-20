@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-tw"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>會員基本資料維護</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../0512/js/tw-city-selector.js"></script>
+  <script>
+    $( function() {
+      $( "#birthday" ).datepicker();
+    } );
+    </script>
+</head>
+<body>
+<!--placeholder="請輸入中英文全名" 會呈現灰色 與value=" 不一樣 大量的文字需要用到<textarea>
+  -->
+<h1>會員基本資料維護</h1>
+<form>
+<p><label>姓名:</label><input type="text" id="name0fUser" placeholder="請輸入中英文全名"></p>
+<p><label>電子郵件位置:</label><input type="email" id="email0User" placeholder="accout@xxx.xxx.xx"></p>
+<p><label>行動電話:</label><input type="tel" id="mobile0fUser" name="tel0User" placeholder="09xxxxxxxx"></p>
+<p><label>性別:</label>
+    <input type="radio" id="male0fUser" name="gender0fUser" checked>男
+    <input type="radio" id="female0fUser" name="gender0fUser">女
+</p>
+<p><label>出生年月日</label><input type="text" id="birthday" name="birthday">
+
+</p>
+地址: <div role="tw-city-selector"></div>
+<p><label>駕照:</label>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1">機車</label>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2">汽車</label>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="none">
+    <label for="vehicle3">無</label></p>
+<p><input type="submit" value="確認"></p>
+
+<label for="ops">建議類型:</label>
+<select id="ops" name="ops">
+  <option value="volvo">系統問題</option>
+  <option value="saab">帳號問題</option>
+  <option value="fiat">繳費問題</option>
+  <option value="audi">其他</option>
+</select>
+
+<p>意見說明:</p>
+<p><textarea name="message" style="width: 600px; height: 200px;">說明內容
+</textarea></p>
+<p><button type="button" onclick="alert('Hello World!')">請按此</button></p>
+</form>
+
+</body>
+<script>
+  new TwCitySelector();
+</script>
+</html>

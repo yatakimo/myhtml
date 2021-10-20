@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>120934109 鄭翔文 網頁跳轉</title>
+</head>
+<style>
+body{
+    margin: 0px auto;
+    background: url() no-repeat ;
+    position:sticky;
+    top: 200px;
+}
+h1{
+    text-decoration: underline;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-weight: bold;
+    text-align:justify;
+ }
+.Menu{
+    background-color: #41b2d4;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+.Menudown{
+    position: fixed;
+    display: inline-block;
+    float: none;
+    right: 10px;
+    top: 350px;
+    z-index: 3;
+}
+.docontent{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 65px;
+    top:5px;
+}
+.docontent A {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.docontent A:hover {
+    background-color: #f1f1f1
+}
+.Menudown:hover .docontent {
+    display: block;
+}
+
+.Menudown:hover .Menu {
+    background-color: #113086;
+}
+.Top{
+    background-color: #41b2d4;
+    border-radius: 8px;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+.TopA{
+    position: fixed;
+    float: none;
+    right: 10px;
+    top: 420px;
+    z-index: 3;
+}
+.hotdog{
+    width: 75px;
+    height: 100px;
+    float: none; 
+    right: 0px;
+    top: 25%;
+    position: fixed;
+}
+.cat{
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    z-index: 2;
+}
+.table{
+    position: absolute;
+    right: 30px;
+    top: 200px;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+}
+.BOX{
+    margin-top: 300px;
+}
+.Top:hover{opacity: 1;}
+</style>
+
+<script>
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0; 
+    }
+</script>
+
+<body>
+<div class="Menudown">
+    <button class="Menu">目錄</button>
+        <div class="docontent">
+            <a href="#">第一章</a>
+            <a href="#">第二章</a>
+            <a href="#">第三章</a>
+        </div>
+</div>
+
+<div class="TopA">
+    <button class="Top" onclick="topFunction()">回頁首</button>
+</div>
+
+<div id="dog" style="display: none;">
+    <img src="http://up.54fcnr.com/pic_source/da/1f/4a/da1f4af361274c9928a459aecec0b351.gif" class="hotdog">
+</div>
+<div id="Pu">
+</div>
+<div>
+    <p style="text-align: center; margin-right: auto;margin-top: 0px;">導航列預留位置</p>
+</div>
+<div class="cat" id="Acat">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"width="300px" height="300px" 
+    viewBox="0 0 673.000000 1280.000000"preserveAspectRatio="xMidYMid meet" id="Bcat">
+        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+            fill="#000000" stroke="none">
+            <path d="M225 12780 c-58 -64 17 -287 203 -609 40 -68 72 -126 72 -130 0 -3
+            -27 -37 -61 -76 -91 -105 -183 -230 -215 -292 l-28 -55 17 -62 c23 -88 40
+            -314 32 -431 -10 -148 -21 -189 -62 -233 -51 -54 -88 -110 -133 -203 -53 -110
+            -58 -138 -30 -191 40 -76 134 -192 260 -319 144 -146 224 -204 280 -204 l38 0
+            -21 -50 c-110 -270 -157 -530 -157 -870 0 -612 188 -1300 565 -2064 l92 -187
+            5 -144 c3 -80 2 -283 -3 -452 -13 -459 -45 -726 -102 -851 -23 -51 -29 -57
+            -123 -107 -272 -146 -373 -247 -374 -373 0 -57 34 -135 64 -147 80 -30 664
+            -61 770 -41 101 19 114 48 76 171 -56 184 15 307 248 425 39 20 72 41 72 47 0
+            11 276 923 287 951 5 9 9 -54 9 -140 4 -444 113 -747 306 -846 l53 -28 -55 6
+            c-211 21 -468 14 -600 -16 -238 -56 -340 -176 -295 -351 17 -67 78 -200 100
+            -218 8 -7 145 -14 382 -20 202 -5 456 -12 563 -15 285 -9 1310 -34 1635 -40
+            154 -3 304 -8 332 -11 l53 -5 98 -137 c233 -322 421 -606 605 -914 433 -722
+            689 -1325 762 -1793 24 -155 17 -410 -15 -510 -60 -191 -179 -332 -350 -418
+            -257 -129 -668 -154 -946 -58 -257 88 -459 289 -609 604 -49 104 -148 384
+            -190 540 -32 117 -119 166 -211 119 -106 -54 -138 -158 -115 -367 26 -229 92
+            -451 201 -673 292 -597 633 -871 1210 -973 125 -23 431 -17 572 9 340 64 634
+            216 848 438 371 385 479 940 314 1599 -38 154 -111 365 -227 655 -185 465
+            -301 711 -451 953 -47 75 -97 159 -110 185 -59 119 -135 335 -231 662 -57 196
+            -63 226 -69 340 -26 488 -140 1166 -286 1699 -239 871 -578 1567 -1036 2129
+            -106 130 -386 410 -504 503 -304 241 -633 425 -973 542 -16 6 -17 20 -11 184
+            17 473 -76 963 -260 1372 -230 508 -622 915 -1129 1170 -316 159 -377 176
+            -420 120 -25 -35 -25 -153 2 -264 10 -44 15 -73 10 -65 -5 8 -26 43 -47 77
+            -112 187 -311 351 -525 434 -113 43 -138 46 -162 19z"/>
+        </g>
+    </svg>    
+</div>
+<div class="table" id="table">
+    <?xml version="1.0" encoding="iso-8859-1"?>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" class="Btable">
+        <g>
+            <path d="M510,56.25H0v45h45v22.5h15v7.5h15v-7.5h15v19.905l22.5,9.844v0.251h0.574l53.322,23.328   
+            C192.884,188.667,210,214.837,210,243.75v7.5h90v-7.5c0-28.913,17.116-55.083,43.604-66.672L420,143.655V123.75h15v7.5h15v-7.5h15  
+            v-22.5h45V56.25z M405,133.845l-11.212,4.905H300v15h59.503l-21.91,9.586c-29.641,12.967-49.551,41.075-52.273,72.914H262.5v-37.5   
+            h-15v37.5h-22.819c-2.723-31.839-22.633-59.947-52.273-72.914l-21.91-9.586H255v-15H116.212L105,133.845V123.75h300V133.845z 
+            M450,108.75H60v-7.5h390V108.75z M495,86.25H15v-15h480V86.25z"/>
+            <path d="M360,386.25c0-24.813-20.187-45-45-45h-15.637c-2.264-13.43-10.493-24.852-21.863-31.446V281.25h7.5v-15h-60v15h7.5v28.554
+            c-11.37,6.595-19.599,18.017-21.863,31.446H195c-24.813,0-45,20.187-45,45c0,16.542-13.458,30-30,30h-7.5v37.5h16.325   
+            c36.489,0,66.175-29.686,66.175-66.175c0-0.731,0.595-1.325,1.325-1.325h33.812c0.771,0.514,1.557,1.008,2.363,1.476v43.524   c0,12.407,10.094,22.5,22.5,22.5s22.5-10.093,22.5-22.5v-43.524c0.806-0.467,1.592-0.962,2.363-1.476h33.812  
+            c0.73,0,1.325,0.594,1.325,1.325c0,36.489,29.686,66.175,66.175,66.175H397.5v-37.5H390C373.458,416.25,360,402.792,360,386.25z    
+            M247.5,281.25h15v23.137c-2.441-0.411-4.944-0.637-7.5-0.637s-5.059,0.226-7.5,0.637V281.25z M255,318.75   
+            c16.542,0,30,13.458,30,30c0,7.516-2.739,14.499-7.5,19.869v-4.869c0-12.407-10.094-22.5-22.5-22.5s-22.5,10.093-22.5,22.5v4.869   
+            c-4.761-5.37-7.5-12.353-7.5-19.869C225,332.208,238.458,318.75,255,318.75z M180,387.575c0,28.218-22.957,51.175-51.175,51.175   
+            H127.5v-8.125c21.256-3.581,37.5-22.117,37.5-44.375c0-16.542,13.458-30,30-30h15.646c0.912,5.313,2.771,10.392,5.438,15h-19.758   
+            C187.323,371.25,180,378.573,180,387.575z M262.5,431.25c0,4.136-3.364,7.5-7.5,7.5s-7.5-3.364-7.5-7.5v-67.5   
+            c0-4.136,3.364-7.5,7.5-7.5s7.5,3.364,7.5,7.5V431.25z M382.5,438.75h-1.325c-28.218,0-51.175-22.957-51.175-51.175   
+            c0-9.002-7.323-16.325-16.325-16.325h-19.758c2.667-4.608,4.526-9.688,5.438-15H315c16.542,0,30,13.458,30,30   
+            c0,22.258,16.244,40.794,37.5,44.375V438.75z"/>
+            
+            <rect x="270" y="138.75" width="15" height="15"/>
+        </g>
+    </svg>
+</div>
+<div>
+    <h1 style="position: absolute; top: 140px;right: 250px;">120934109 鄭翔文 作業/跳轉</h1>
+</div>
+<div>
+    <img src="Starry sky.jpg" width="100%" height="604px"style="margin-top: 0;">
+</div>
+<div>
+    <h1>內文</h1>
+</div>
+<script>
+function showdogAuto(){
+    var div = document.getElementById("Pu");
+    var x = div.getBoundingClientRect();
+    y = x.top
+    if (y <= -150){
+    var K = true
+   }
+   else{
+       var K = false
+   }
+   if(K == true){
+       document.getElementById("Acat").style.position = "fixed";
+       document.getElementById("Acat").style.right = "0px";
+       document.getElementById("Acat").style.top = "250px";
+       document.getElementById("Bcat").style.width = "75px";
+       document.getElementById("Bcat").style.height = "100px";
+       document.getElementById("table").style.position = "fixed";
+       document.getElementById("table").style.right = "20px";
+       document.getElementById("table").style.top = "310px";
+       document.getElementById("table").style.width = "50px";
+       document.getElementById("table").style.height = "50px";
+   }
+   else if(K == false){
+       document.getElementById("Acat").style.position = "absolute";
+       document.getElementById("Acat").style.right = "30px";
+       document.getElementById("Acat").style.top = "40px";
+       document.getElementById("Bcat").style.width = "300px";
+       document.getElementById("Bcat").style.height = "300px";
+       document.getElementById("table").style.position = "absolute";
+       document.getElementById("table").style.right = "30px";
+       document.getElementById("table").style.top = "200px";
+       document.getElementById("table").style.width = "300px";
+       document.getElementById("table").style.height = "300px";
+   }
+}
+</script>
+</body>
+<script>
+    window.setInterval(showdogAuto,500);
+</script>
+</html>
